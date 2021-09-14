@@ -126,8 +126,71 @@ Ping the satellite in order to establish UHF communication link with Virginia gr
 
 
 
-* xref:{doc-name}#_1_1_primary_mission_objective_a1[Primary Mission Objective A1]
 
+
+
+
+=== 2: View Satellite Health Data Packet
+
+****
+As a *Ground Station Operator* I want to *View satellite health data packet* so that I can *Validate that satellite is operating nominally*.
+****
+
+==== Example:
+
+View satellite health data packet in order to validate the mission data of the IP and DeCS payloads
+
+
+==== *Derived From:*
+
+
+
+
+* xref:{doc-name}#_1_2_primary_mission_objective_a2[Primary Mission Objective A2]
+
+
+
+
+* xref:{doc-name}#_1_3_primary_mission_objective_a3[Primary Mission Objective A3]
+
+
+
+
+
+
+
+
+=== 2.1: Listen for Satellite Beacon
+
+****
+As a *Ground Station Operator* I want to *Open ground station beacon monitor* so that I can *View satellite health data packet*.
+****
+
+==== Example:
+
+Open ground station beacon monitor to listen for satellite health data packet downlink
+
+
+==== *Derived From:*
+
+
+
+
+* xref:{doc-name}#_2_view_satellite_health_data_packet[View Satellite Health Data Packet]
+
+
+
+
+
+=== 3: Update Beacon Rate
+
+****
+As a *Ground Station Operator* I want to *Update Beacon Rate* so that I can *Conserve power budget*.
+****
+
+==== Example:
+
+Update beacon rate to transmit every 30 minutes to conserve power
 
 
 

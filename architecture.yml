@@ -17,21 +17,21 @@ elements:
     title: ITAR Compliance Guide
     url: >-
       https://research.mit.edu/integrity-and-compliance/export-control/information-documents/my-satellite-itar-or-ear
-  1-StakeholderNeeds/1.1-Primary_Mission_Objective-A1.yml: &ref_5
+  1-StakeholderNeeds/1.1-Primary_Mission_Objective-A1.yaml: &ref_5
     id: 1.1
     name: Primary Mission Objective A1
     statement: >-
       The SeaLion mission shall establish UHF communication link with Virginia
       ground station
     derivedFrom: []
-  1-StakeholderNeeds/1.2-Primary_Mission_Objective-A2.yml: &ref_6
+  1-StakeholderNeeds/1.2-Primary_Mission_Objective-A2.yaml: &ref_6
     id: 1.2
     name: Primary Mission Objective A2
     statement: >-
       The SeaLion mission shall establish S-Band communication link with MC3
       ground station
     derivedFrom: []
-  1-StakeholderNeeds/1.3-Primary_Mission_Objective-A3.yml: &ref_7
+  1-StakeholderNeeds/1.3-Primary_Mission_Objective-A3.yaml: &ref_7
     id: 1.3
     name: Primary Mission Objective A3
     statement: >-
@@ -85,7 +85,7 @@ elements:
       The SeaLion shall verify DeCS in-orbit behavior performance via
       accelerometer & temperature sensor data
     derivedFrom: []
-  2-UserStories/1-PingSatellite.yml: &ref_15
+  2-UserStories/1-PingSatellite.yaml: &ref_15
     id: 1
     name: Ping Satellite
     actor: Ground Station Operator
@@ -96,7 +96,39 @@ elements:
     example: >-
       Ping the satellite in order to establish UHF communication link with
       Virginia ground station
-  4-Components/component.yaml: &ref_16
+  2-UserStories/2-ViewSatelliteHealthDataPacket.yaml: &ref_16
+    id: 2
+    name: View Satellite Health Data Packet
+    actor: Ground Station Operator
+    behavior: View satellite health data packet
+    rationale: Validate that satellite is operating nominally
+    derivedFrom:
+      - 1-StakeholderNeeds/1.2-Primary_Mission_Objective-A2.yaml
+      - 1-StakeholderNeeds/1.3-Primary_Mission_Objective-A3.yaml
+      - 1-StakeholderNeeds/3.3-Tertiary_Mission_Objective-C3.yaml
+    example: >-
+      View satellite health data packet in order to validate the mission data of
+      the IP and DeCS payloads
+  2-UserStories/2.1-ListenForSatelliteBeacon.yaml: &ref_17
+    id: 2.1
+    name: Listen for Satellite Beacon
+    actor: Ground Station Operator
+    behavior: Open ground station beacon monitor
+    rationale: View satellite health data packet
+    derivedFrom:
+      - 2-UserStories/2-ViewSatelliteHealthDataPacket.yaml
+    example: >-
+      Open ground station beacon monitor to listen for satellite health data
+      packet downlink
+  2-UserStories/3-UpdateBeaconRate.yaml: &ref_18
+    id: 3
+    name: Update Beacon Rate
+    actor: Ground Station Operator
+    behavior: Update Beacon Rate
+    rationale: Conserve power budget
+    derivedFrom: []
+    example: Update beacon rate to transmit every 30 minutes to conserve power
+  4-Components/component.yaml: &ref_19
     name: sealion
     version: 1.0.0
     description: SeaLion Mission Concept of Operations (ConOps)
@@ -148,7 +180,7 @@ package:
     js-yaml: ^3.12.0
     liquidjs: ^6.1.1
     minimist: ^1.2.0
-generationDate: 9/9/2021
+generationDate: 9/14/2021
 0-References:
   - *ref_0
   - *ref_1
@@ -168,5 +200,8 @@ generationDate: 9/9/2021
   - *ref_14
 2-UserStories:
   - *ref_15
-4-Components:
   - *ref_16
+  - *ref_17
+  - *ref_18
+4-Components:
+  - *ref_19
