@@ -200,3 +200,261 @@ Update beacon rate to transmit every 30 minutes to conserve power
 This section covers each data structure type in the *SeaLion Mission Concept of Operations (ConOps)*.
 
 
+=== Satellite Health Data Packet
+*Purpose:* Data structure for satellite health data packet from ground station operator's viewpoint.
+
+.Satellite Health Data Packet Template
+----
+imu_gyro_x: {{imu_gyro_x}}
+imu_gyro_y: {{imu_gyro_y}}
+imu_gyro_z: {{imu_gyro_z}}
+imu_magnetometer_x: {{imu_magnetometer_x}}
+imu_magnetometer_y: {{imu_magnetometer_y}}
+imu_magnetometer_z: {{imu_magnetometer_z}}
+temperature_imu: {{temperature_imu}}
+temperature_battery: {{temperature_battery}}
+temperature_on_board_computer: {{temperature_on_board_computer}}
+temperature_processor: {{temperature_processor}}
+battery_voltage: {{battery_voltage}}
+battery_current: {{battery_current}}
+time_stamp: {{time_stamp}}
+boot_count: {{boot_count}}
+boot_time: {{boot_time}}
+operational_status_of_equipment: {{operational_status_of_equipment}}
+redundancy_status: {{redundancy_status}}
+altitude_data: {{altitude_data}}
+lattitude: {{lattitude}}
+longitude: {{longitude}}
+
+----
+
+.Satellite Health Data Packet Specification
+|===
+|Field |Type |Item Type |Description |Source
+
+
+|imu_gyro_x
+|float
+
+|
+
+|The angular rate of the body with to respective to the x-axis in the IMU's reference frame.
+
+|
+
+
+
+|imu_gyro_y
+|float
+
+|
+
+|The angular rate of the body with to respective to the y-axis in the IMU's reference frame.
+
+|
+
+
+
+|imu_gyro_z
+|float
+
+|
+
+|The angular rate of the body with to respective to the z-axis in the IMU's reference frame.
+
+|
+
+
+
+|imu_magnetometer_x
+|float
+
+|
+
+|The magnetic field strength with respective to the x-axis in the IMU's reference frame.
+
+|
+
+
+
+|imu_magnetometer_y
+|float
+
+|
+
+|The magnetic field strength with respective to the y-axis in the IMU's reference frame.
+
+|
+
+
+
+|imu_magnetometer_z
+|float
+
+|
+
+|The magnetic field strength with respective to the z-axis in the IMU's reference frame.
+
+|
+
+
+
+|battery_voltage
+|float
+
+|
+
+|Voltage of the battery. Units in volts.
+
+|
+
+
+
+|battery_current
+|float
+
+|
+
+|Current draw of the battery. Units in milliamps.
+
+|
+
+
+
+|temperature_imu
+|float
+
+|
+
+|The temperature of the IMU. Units in Kelvin.
+
+|
+
+
+
+|temperature_battery
+|float
+
+|
+
+|The temperature of the battery. Units in Kelvin.
+
+|
+
+
+
+|temperature_on_board_computer
+|float
+
+|
+
+|The temperature of the on board computer. Untis in Kelvin.
+
+|
+
+
+
+|temperature_processor
+|float
+
+|
+
+|The temperature of the processor. Units in Kelvin.
+
+|
+
+
+
+|time_stamp
+|float
+
+|
+
+|Time stamp of the last transmission.
+
+|
+
+
+
+|boot_count
+|float
+
+|
+
+|Number of times the computer has rebooted.
+
+|
+
+
+
+|boot_time
+|float
+
+|
+
+|The time stamp when the computer last booted.
+
+|
+
+
+
+|operational_status_of_equipment
+|float
+
+|
+
+|The operation status of the equipment.
+
+|
+
+
+
+|redundancy_status
+|float
+
+|
+
+|The redundancy status of the satellite.
+
+|
+
+
+
+|altitude_data
+|float
+
+|
+
+|The altitude data of the satellite.
+
+|
+
+
+
+|lattitude
+|float
+
+|
+
+|Lattitude coordinate of the satellite.
+
+|
+
+
+
+|longitude
+|float
+
+|
+
+|Longitude coordinate of the satellite.
+
+|
+
+
+
+|===
+
+
+
+
