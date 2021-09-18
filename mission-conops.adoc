@@ -1,6 +1,6 @@
 = SeaLion Mission Concept of Operations (ConOps)
 :doc-name: mission-conops.adoc
-:revnumber: v1.0.0
+:revnumber: v2.0.0
 :toc: left
 
 ifndef::backend-pdf[]
@@ -126,6 +126,8 @@ Ping the satellite in order to establish UHF communication link with Virginia gr
 
 
 
+* xref:{doc-name}#_1_1_primary_mission_objective_a1[Primary Mission Objective A1]
+
 
 
 
@@ -155,6 +157,8 @@ View satellite health data packet in order to validate the mission data of the I
 
 
 
+
+* xref:{doc-name}#_3_3_tertiary_mission_objective_c3[Tertiary Mission Objective C3]
 
 
 

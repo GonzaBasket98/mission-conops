@@ -27,7 +27,7 @@ header:
         *SeaLion Mission Concept of Operations (ConOps)* +
     right:
       content: |
-        *v1.0.0*
+        *v2.0.0*
   verso:
     left:
       content: $header-recto-left-content
