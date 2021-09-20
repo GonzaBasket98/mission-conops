@@ -1,6 +1,6 @@
 = SeaLion Mission Concept of Operations (ConOps)
 :doc-name: mission-conops.adoc
-:revnumber: v2.0.0
+:revnumber: v3.0.0
 :toc: left
 
 ifndef::backend-pdf[]
@@ -66,7 +66,7 @@ The SeaLion mission shall validate the operation of the Impedance Probe (IP) as 
 
 === 2.1: Secondary Mission Objective B1
 ****
-The SeaLion mission shall provide a means to validate a V-Infrared Sensor (VIR-S) in-orbit
+The SeaLion mission shall provide a means to validate a Multi-spectral Sensor (Ms-S) in-orbit
 **** 
 
 
