@@ -467,5 +467,14 @@ longitude: {{longitude}}
 |===
 
 
+==== *Derived From:*
+
+
+
+
+* xref:{doc-name}#_2_view_satellite_health_data_packet[View Satellite Health Data Packet]
+
+
+
 
 
