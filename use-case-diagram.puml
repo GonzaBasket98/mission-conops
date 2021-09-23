@@ -1,0 +1,36 @@
+@startuml
+left to right direction
+skinparam linetype polyline
+
+/'
+skinparam linetype ortho
+'/
+
+frame "uc [ SeaLion Mission Concept of Operations (ConOps) Use Case Diagram ]" {
+
+    rectangle gs as "Ground Station" {
+
+        
+        (Establish communication link with satellite)
+        
+        (Validate that satellite is operating nominally)
+        
+        (View satellite health data packet)
+        
+        (Conserve power budget)
+        
+
+    }
+
+    
+    :Ground Station Operator: -- (Establish communication link with satellite)
+    
+    :Ground Station Operator: -- (Validate that satellite is operating nominally)
+    
+    :Ground Station Operator: -- (View satellite health data packet)
+    
+    :Ground Station Operator: -- (Conserve power budget)
+    
+
+}
+@enduml
